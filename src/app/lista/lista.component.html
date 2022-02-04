@@ -1,0 +1,14 @@
+<!--En este componente se imprimen los trabajadores-->
+<div class="containerLista" *ngIf="arrayTrabajadores.length>=1">
+
+
+  <div class="datos" *ngFor="let trabajador of arrayTrabajadores; let i=index;">
+    <h3>Trabajador número {{i+1}}</h3>
+    <p>Nombre: {{trabajador.nombre}}.</p>
+    <p>Apellidos{{trabajador.apellidos}}.</p>
+    <p>Teléfono: {{trabajador.telefono}}.</p>
+    <p>Email: {{trabajador.email}}.</p>
+  </div>
+
+
+</div>

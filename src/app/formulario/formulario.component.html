@@ -1,0 +1,42 @@
+<!--En este componente creamos los trabajadores rellenando el formulario-->
+<div class="container">
+
+  <form [formGroup]="formulario" id="formulario" (ngSubmit)="onSubmit()">
+    <h2>Añadir trabajador a la lista</h2>
+    <label for="fname">Nombre:</label><br>
+    <input type="text" [class.is-invalid]="formulario.get('nombre').invalid && formulario.get('nombre').touched"
+      id="fname" formControlName="nombre" placeholder="Ej: Laura">
+    <small class="error" *ngIf="formulario.get('nombre').invalid && formulario.get('nombre').touched">El nombre no es
+      válido</small><br><br>
+
+
+
+    <label for="fapellidos">Apellidos:</label><br>
+    <input type="text" id="fapellidos" formControlName="apellidos" placeholder="Ej: López">
+    <small class="error" *ngIf="formulario.get('apellidos').invalid && formulario.get('apellidos').touched">Los
+      apellidos no
+      son válidos
+    </small><br><br>
+    <label for="ftel">Teléfono:</label><br>
+    <input type="text" id="ftel" formControlName="telefono" placeholder="Ej: 656984523">
+    <small class="error" *ngIf="formulario.get('telefono').invalid && formulario.get('telefono').touched">El teléfono no
+      es
+      válido</small><br><br>
+    <label for="femail">Email:</label><br>
+    <input type="text" id="femail" formControlName="email" placeholder="Ej: lauralopez@gmail.com">
+    <small class="error" *ngIf="formulario.get('email').invalid && formulario.get('email').touched">El email no es
+      válido</small><br><br>
+    <label for="fdepartamento">Departamento:</label><br>
+    <input type="text" id="fdepartamento" formControlName="departamento" placeholder="Ej: RRHH">
+    <small class="error" *ngIf="formulario.get('departamento').invalid && formulario.get('departamento').touched">El
+      departamento no es
+      válido</small><br><br>
+
+    <div class="botones"><input [ngStyle]="{'opacity': !formulario.valid?0.5:''}" [disabled]="!formulario.valid"
+        type="submit" value="Añadir">
+      <input type="reset" value="Limpiar">
+    </div>
+
+
+  </form>
+</div>

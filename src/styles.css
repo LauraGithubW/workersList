@@ -1,0 +1,98 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container h2 {
+  text-align: center;
+  color: #fff;
+}
+.container #formulario {
+  display: flex;
+  flex-direction: column;
+
+  background-color: rgb(131, 161, 185);
+  padding: 1em;
+  border-radius: 1rem;
+  width: 20em;
+}
+.container #formulario .botones {
+  display: flex;
+}
+.container #formulario input[type="submit"],
+input[type="reset"] {
+  width: 10em;
+
+  margin-left: 2%;
+  background-color: rgb(42, 42, 202);
+  border: none;
+  color: #fff;
+  padding: 0.5em;
+  border-radius: 5%;
+  font-weight: bold;
+  transition: all 0.5s ease;
+}
+.botonOff {
+  background-color: thistle;
+}
+.container #formulario input[type="submit"]:hover,
+input[type="reset"]:hover {
+  cursor: pointer;
+  background-color: rgb(54, 54, 134);
+}
+@media (max-width: 429px) {
+  .container #formulario {
+    width: 15em;
+  }
+  .container #formulario input[type="submit"],
+  input[type="reset"] {
+    width: 8em;
+    padding: 1em;
+  }
+  .containerLista {
+    display: flex;
+    flex-direction: column;
+    margin: 2%;
+  }
+}
+
+@media (max-width: 772px) {
+  .containerLista {
+    display: flex;
+    align-items: center;
+
+    flex-direction: column;
+    margin: 2%;
+  }
+  .container form .error {
+    background-color: rgb(243, 107, 83);
+  }
+}
+/**ESTILOS DE LA LISTA*/
+
+.containerLista {
+  display: flex;
+
+  flex-wrap: wrap;
+  margin-top: 2%;
+}
+.containerLista .datos {
+  display: flex;
+  flex-direction: column;
+  margin: 2%;
+  color: #fff;
+
+  background-color: rgb(62, 137, 199);
+  padding: 1em;
+  border-radius: 1rem;
+  width: 15em;
+}
+.containerLista .datos h3,
+label {
+  color: rgb(0, 0, 0);
+  text-decoration: underline;
+  font-weight: bold;
+}
+.container form .error {
+  background-color: rgb(243, 107, 83);
+}
